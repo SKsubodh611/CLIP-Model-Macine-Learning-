@@ -1,0 +1,118 @@
+error :
+
+
+
+Traceback (most recent call last):
+  File "D:\Clip\Realtime_object_detection.py", line 9, in <module>
+    model, preprocess = open_clip.create_model_and_transforms("ViT-B-32", pretrained="openai")
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\open_clip\factory.py", line 502, in create_model_and_transforms
+    model = create_model(
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\open_clip\factory.py", line 383, in create_model
+    checkpoint_path = download_pretrained(pretrained_cfg, cache_dir=cache_dir)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\open_clip\pretrained.py", line 843, in download_pretrained
+    target = download_pretrained_from_hf(model_id, cache_dir=cache_dir)
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\open_clip\pretrained.py", line 810, in download_pretrained_from_hf
+    raise FileNotFoundError(f"Failed to download file ({filename}) for {model_id}. Last error: {e}")
+FileNotFoundError: Failed to download file (open_clip_pytorch_model.bin) for timm/vit_base_patch32_clip_224.openai. Last error: (MaxRetryErrd9f38c366cf9b6b8799a86f32/9ecdaef325b20e7283dc6a32f92aa638d100899e4f084c2462d3832eeea0b26e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27open_clip_pytorch_model.bin%3B+filename%3D%22open_clip_pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1741872226&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0MTg3MjIyNn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9yZXBvcy9mNC85MS9mNDkxMTIwNzZjMDI5YTRkYWZkOGQ2ODdlN2JmZTgyODI1YTg5NmNkOWYzOGMzNjZjZjliNmI4Nzk5YTg2ZjMyLzllY2RhZWYzMjViMjBlNzI4M2RjNmEzMmY5MmFhNjM4ZDEwMDg5OWU0ZjA4NGMyNDYyZDM4MzJlZWVhMGIyNmU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=mj9eJaW1Es6iTvk0lQEJYPyEIZM6iQJEdhUNOR2wJoeoIPbD1~46JCNQNYzbxu25jW1Eiw~As1W022LZj~0Gxy40N-rjxPr7K0YHuXiI67e77zHh9I1EBSMP-n-w3rEsooEsovwNUv2ZGrMaa~RcAusNq7L0-zGdfYgVdpKHSG0fm61UphgHzi8QgkUwfAXVCVBbVeeIXWA8RookbbcWp~hT5eDX2XNbyJmYVFm4JhB-WjSw8-Em59AEsusSswunhzEd51VoeF0RaXH3i-fm~8VSih58P7sCdzbqzlahdRPE1mtxe4nUsHkbzhdA5m8hDOWvOjEs72pBZ6NcQwA~ZA__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002269F23E790>, 'Connection to cdn-lfs.hf.co timed out. (connect timeout=10)'))"), '(Request ID: 1f92de6c-b2bb-4b9d-8ab8-9f6aff333cff)')
+PS D:\Clip> python Realtime_object_detection.py
+open_clip_model.safetensors: 100%|███████████████████████████████████████████████████████████████████████| 605M/605M [23:11<00:00, 435kB/s]
+C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\huggingface_hub\file_download.py:142: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\Admin\.cache\huggingface\hub\models--timm--vit_base_patch32_clip_224.openai. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+per mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\open_clip\factory.py:388: UserWarning: These pretrained weights were trained with QuickGELU activation but the model config does not have that 
+enabled. Consider using a model config with a "-quickgelu" suffix or enable with a flag.
+  warnings.warn(
+Traceback (most recent call last):
+  File "D:\Clip\Realtime_object_detection.py", line 9, in <module>
+ValueError: too many values to unpack (expected 2)
+PS D:\Clip> python Realtime_object_detection.py
+C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\open_clip\factory.py:388: UserWarning: These pretrained weights were trained with QuickGELU activation but the model config does not have that 
+  warnings.warn(
+Traceback (most recent call last):
+  File "D:\Clip\Realtime_object_detection.py", line 9, in <module>
+    model, preprocess = open_clip.create_model_and_transforms("ViT-B-32", pretrained="openai")
+ValueError: too many values to unpack (expected 2)
+PS D:\Clip> python tmp2.py
+Traceback (most recent call last):
+  File "D:\Clip\tmp2.py", line 3, in <module>
+    import clip
+ModuleNotFoundError: No module named 'clip'
+PS D:\Clip> pip install clip-by-openai
+Collecting clip-by-openai
+  Downloading clip_by_openai-1.1-py3-none-any.whl.metadata (369 bytes)
+Requirement already satisfied: ftfy in c:\users\admin\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from clip-by-openai) (6.3.1)
+Requirement already satisfied: regex in c:\users\admin\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from clip-by-openai) (2024.11.6)
+Requirement already satisfied: tqdm in c:\users\admin\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from clip-by-openai) (4.67.1)
+Collecting torch<1.7.2,>=1.7.1 (from clip-by-openai)
+  Downloading torch-1.7.1-cp39-cp39-win_amd64.whl.metadata (23 kB)
+INFO: pip is looking at multiple versions of clip-by-openai to determine which version is compatible with other requirements. This could take a while.
+Collecting clip-by-openai
+  Downloading clip_by_openai-1.0.1-py3-none-any.whl.metadata (407 bytes)
+  Downloading clip_by_openai-0.1.1.5-py3-none-any.whl.metadata (8.6 kB)
+  Downloading clip_by_openai-0.1.1.4-py3-none-any.whl.metadata (8.6 kB)
+  Downloading clip_by_openai-0.1.1.3-py3-none-any.whl.metadata (8.7 kB)
+  Downloading clip_by_openai-0.1.1.2-py3-none-any.whl.metadata (9.0 kB)
+Requirement already satisfied: torchvision in c:\users\admin\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from clip-by-openai) (0.21.0)
+Requirement already satisfied: typing-extensions in c:\users\admin\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from torch<1.7.2,>=1.7.1->clip-by-openai) (4.12.2)
+Requirement already satisfied: numpy in c:\users\admin\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from torch<1.7.2,>=1.7.1->clip-by-openai) (2.0.2)
+Requirement already satisfied: wcwidth in c:\users\admin\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from ftfy->clip-by-openai) (0.2.13)
+INFO: pip is looking at multiple versions of torchvision to determine which version is compatible with other requirements. This could take a while.
+Collecting torchvision (from clip-by-openai)
+  Downloading torchvision-0.20.1-cp39-cp39-win_amd64.whl.metadata (6.2 kB)
+  Downloading torchvision-0.20.0-cp39-cp39-win_amd64.whl.metadata (6.2 kB)
+  Downloading torchvision-0.19.1-cp39-cp39-win_amd64.whl.metadata (6.1 kB)
+  Downloading torchvision-0.19.0-1-cp39-cp39-win_amd64.whl.metadata (6.1 kB)
+Collecting numpy (from torch<1.7.2,>=1.7.1->clip-by-openai)
+  Downloading numpy-1.26.4-cp39-cp39-win_amd64.whl.metadata (61 kB)
+Collecting torchvision (from clip-by-openai)
+  Downloading torchvision-0.18.1-cp39-cp39-win_amd64.whl.metadata (6.6 kB)
+  Downloading torchvision-0.18.0-cp39-cp39-win_amd64.whl.metadata (6.6 kB)
+  Downloading torchvision-0.17.2-cp39-cp39-win_amd64.whl.metadata (6.6 kB)
+INFO: pip is still looking at multiple versions of torchvision to determine which version is compatible with other requirements. This could 
+take a while.
+  Downloading torchvision-0.17.1-cp39-cp39-win_amd64.whl.metadata (6.6 kB)
+  Downloading torchvision-0.17.0-cp39-cp39-win_amd64.whl.metadata (6.6 kB)
+Requirement already satisfied: requests in c:\users\admin\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from torchvision->clip-by-openai) (2.32.3)
+  Downloading torchvision-0.16.2-cp39-cp39-win_amd64.whl.metadata (6.6 kB)
+  Downloading torchvision-0.16.1-cp39-cp39-win_amd64.whl.metadata (6.6 kB)
+  Downloading torchvision-0.16.0-cp39-cp39-win_amd64.whl.metadata (6.6 kB)
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+  Downloading torchvision-0.15.2-cp39-cp39-win_amd64.whl.metadata (11 kB)
+  Downloading torchvision-0.15.1-cp39-cp39-win_amd64.whl.metadata (11 kB)
+  Downloading torchvision-0.14.1-cp39-cp39-win_amd64.whl.metadata (11 kB)
+  Downloading torchvision-0.14.0-cp39-cp39-win_amd64.whl.metadata (11 kB)
+  Downloading torchvision-0.13.1-cp39-cp39-win_amd64.whl.metadata (10 kB)
+  Downloading torchvision-0.13.0-cp39-cp39-win_amd64.whl.metadata (10 kB)
+  Downloading torchvision-0.12.0-cp39-cp39-win_amd64.whl.metadata (10 kB)
+  Downloading torchvision-0.11.3-cp39-cp39-win_amd64.whl.metadata (8.8 kB)
+  Downloading torchvision-0.11.2-cp39-cp39-win_amd64.whl.metadata (8.8 kB)
+  Downloading torchvision-0.11.1-cp39-cp39-win_amd64.whl.metadata (8.8 kB)
+  Downloading torchvision-0.10.1-cp39-cp39-win_amd64.whl.metadata (7.9 kB)
+  Downloading torchvision-0.10.0-cp39-cp39-win_amd64.whl.metadata (7.9 kB)
+  Downloading torchvision-0.9.1-cp39-cp39-win_amd64.whl.metadata (7.9 kB)
+  Downloading torchvision-0.9.0-cp39-cp39-win_amd64.whl.metadata (7.9 kB)
+INFO: pip is still looking at multiple versions of clip-by-openai to determine which version is compatible with other requirements. This could take a while.
+Collecting clip-by-openai
+  Downloading clip_by_openai-0.1.1-py3-none-any.whl.metadata (9.0 kB)
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+  Downloading clip_by_openai-0.1.0-py3-none-any.whl.metadata (9.0 kB)
+ERROR: Cannot install clip-by-openai==0.1.1.3, clip-by-openai==0.1.1.4, clip-by-openai==0.1.1.5, clip-by-openai==1.0.1 and clip-by-openai==1.1 because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    clip-by-openai 1.1 depends on torchvision==0.8.2
+    clip-by-openai 1.0.1 depends on torchvision==0.8.2
+    clip-by-openai 0.1.1.5 depends on torchvision==0.8.2
+    clip-by-openai 1.0.1 depends on torchvision==0.8.2
+    clip-by-openai 0.1.1.5 depends on torchvision==0.8.2
+    clip-by-openai 0.1.1.3 depends on torchvision==0.8.2
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip to attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+
+solution :
+
+dont install clip suggested by chatgpt ,use pip install git+https://github.com/openai/CLIP.git
