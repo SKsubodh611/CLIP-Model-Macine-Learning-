@@ -1,8 +1,4 @@
-import cv2
-import torch
-import clip
-import numpy as np
-from PIL import Image
+from imports import *
 
 # Load the CLIP model
 device = "cuda" if torch.cuda.is_available() else "cpu"
